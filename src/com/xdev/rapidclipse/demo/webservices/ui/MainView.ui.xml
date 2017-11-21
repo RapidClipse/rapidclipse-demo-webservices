@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_WUXGA?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevGridLayout?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevLabel?>
+<?import com.xdev.ui.XdevTextField?>
+<?import com.xdev.ui.XdevVerticalLayout?>
+<?import com.xdev.ui.XdevView?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainView">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevGridLayout x:name="gridLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevHorizontalLayout x:name="horizontalLayout3" margin="">
+            <x:constraints gridx="1" gridy="1" weighty="0.0" weightx="0.1" width="100%" height="200px" />
+            <XdevVerticalLayout x:name="verticalLayout2" margin="">
+                <x:constraints weightx="0.1" width="100%" height="100%" />
+                <XdevLabel styleName="h4" x:name="label2" value="Send a simple String">
+                    <x:constraints gridHeight="1" gridx="1" gridy="2" weighty="0.0" weightx="0.1" width="100%" alignment="TOP_LEFT" gridWidth="1" />
+                </XdevLabel>
+                <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+                    <x:constraints gridHeight="1" gridx="1" gridy="3" weighty="0.0" weightx="0.1" width="100%" alignment="TOP_LEFT" gridWidth="1" />
+                    <XdevTextField columns="5" caption="String to be send" styleName="small" x:name="txtToSend">
+                        <x:constraints gridHeight="1" gridx="1" gridy="2" weighty="0.0" weightx="0.1" width="100%" alignment="TOP_LEFT" gridWidth="1" />
+                    </XdevTextField>
+                    <XdevButton caption="Send" styleName="small" x:name="button">
+                        <x:constraints gridHeight="1" gridx="1" gridy="3" weighty="0.0" weightx="0.0" alignment="BOTTOM_LEFT" gridWidth="1" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                    <XdevButton icon="FontAwesome.LOCK" caption="Send secured" styleName="small" x:name="button3">
+                        <x:constraints weightx="0.0" alignment="BOTTOM_CENTER" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                </XdevHorizontalLayout>
+                <XdevTextField columns="5" caption="Server answered" styleName="small" x:name="txtResponse">
+                    <x:constraints gridHeight="1" gridx="1" gridy="4" weighty="0.0" weightx="0.1" width="100%" alignment="TOP_LEFT" gridWidth="1" />
+                </XdevTextField>
+            </XdevVerticalLayout>
+            <XdevVerticalLayout x:name="verticalLayout3" margin="">
+                <x:constraints weightx="0.1" width="100%" />
+                <XdevLabel x:name="label3" value="Hints:">
+                    <x:constraints weighty="0.0" alignment="MIDDLE_LEFT" />
+                </XdevLabel>
+                <XdevLabel x:name="label4" value="1. This application has to be started by a Tomcat ">
+                    <x:constraints weighty="0.0" alignment="MIDDLE_LEFT" />
+                </XdevLabel>
+                <XdevLabel x:name="label5" value="2. Maybe it is necessary to change the URL which is used in the code.">
+                    <x:constraints weighty="0.0" alignment="MIDDLE_LEFT" />
+                </XdevLabel>
+                <XdevLabel x:name="label7" value="3. For &quot;Send Secure&quot; with authentication it is necessary to enter the following line to the tomcat-user.xml -- &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;restconsumer&quot;/&gt;">
+                    <x:constraints weighty="0.0" width="100%" />
+                </XdevLabel>
+            </XdevVerticalLayout>
+        </XdevHorizontalLayout>
+        <XdevLabel styleName="h4" x:name="label" value="Call an entity by ID">
+            <x:constraints gridx="1" gridy="2" weighty="0.0" weightx="0.1" />
+        </XdevLabel>
+        <XdevHorizontalLayout x:name="horizontalLayout2" margin="">
+            <x:constraints gridx="1" gridy="3" weighty="0.0" weightx="0.1" width="100%" />
+            <XdevTextField columns="5" caption="CustomerID (ALFKI, ANTON, ...)" styleName="small" x:name="txtCustomerIDCall">
+                <x:constraints gridHeight="1" gridx="1" gridy="5" weighty="0.0" weightx="0.0" width="300px" alignment="TOP_LEFT" gridWidth="1" />
+            </XdevTextField>
+            <XdevButton caption="Laden" styleName="small" x:name="button2">
+                <x:constraints gridHeight="1" gridx="1" gridy="3" weighty="0.0" weightx="0.0" alignment="BOTTOM_LEFT" gridWidth="1" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevGridLayout x:name="verticalLayout" margin="">
+            <x:constraints gridx="1" gridy="4" weighty="0.1" weightx="0.1" width="100%" />
+            <XdevTextField columns="5" caption="Kundennummer" styleName="small" x:name="txtCustomerID">
+                <x:constraints gridx="1" gridy="1" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Postleitzahl" styleName="small" x:name="txtPLZ">
+                <x:constraints gridx="2" gridy="1" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Firmenname" styleName="small" x:name="txtCompanyName">
+                <x:constraints gridx="1" gridy="2" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Stadt" styleName="small" x:name="txtCity">
+                <x:constraints gridx="2" gridy="2" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Adresse" styleName="small" x:name="txtAddress">
+                <x:constraints gridx="1" gridy="3" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Land" styleName="small" x:name="txtCountry">
+                <x:constraints gridx="2" gridy="3" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Telefon" styleName="small" x:name="txtPhone">
+                <x:constraints gridx="1" gridy="4" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+            <XdevTextField columns="5" caption="Fax" styleName="small" x:name="txtFax">
+                <x:constraints gridx="2" gridy="4" weighty="0.0" weightx="0.1" width="100%" />
+            </XdevTextField>
+        </XdevGridLayout>
+    </XdevGridLayout>
+</XdevView>
+
