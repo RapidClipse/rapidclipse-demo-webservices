@@ -12,5 +12,5 @@ This demo project shows how to configure a RapidClipse project to use webservice
 2. File -> Import -> RapidClipse -> Demo Projects -> "rapidclipse-demo-webservices"
 3. Maybe do some Maven updates to remove project errors
 4. The project needs the H2Northwind database. The entities in the project should be syncronized with the database.
-5. Add the following line of code to your tomcat-user.xml in your workspace/server/tomcat... -- "<user username="admin" password="admin" roles="restconsumer"/>"
+5. Add the following line of code to your tomcat-user.xml in your workspace/server/tomcat... [example](<user username="admin" password="admin" roles="restconsumer"/>)
 6. Start the project
